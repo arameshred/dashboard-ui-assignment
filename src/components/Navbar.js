@@ -7,21 +7,24 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full bg-gray-800 p-4 flex justify-between items-center z-50">
-      {/* Logo Button */}
-      <Link to="/dashboard" className="flex items-center space-x-2 text-white" aria-label="Go to Dashboard">
-        <FaReact className="text-3xl" />
-        <span className="text-lg font-bold">MyApp</span>
-      </Link>
-      
-      {/* Search Input */}
-      <div className="relative w-1/3">
-        <input
-          type="text"
-          placeholder="Search"
-          className="p-2 pl-10 rounded bg-gray-700 text-white w-full"
-          aria-label="Search"
-        />
-        <FaSearch className="absolute top-2 left-3 text-white text-lg" />
+      {/* Logo and Search Input */}
+      <div className="flex items-center pr-24 space-x-4 flex-grow">
+        {/* Logo Button */}
+        <Link to="/dashboard" className="flex items-center space-x-2 text-white" aria-label="Go to Dashboard">
+          <FaReact className="text-3xl" />
+          <span className="text-lg font-bold">MyApp</span>
+        </Link>
+        
+        {/* Search Input */}
+        <div className="relative w-1/3 ml-4">
+          <input
+            type="text"
+            placeholder="Search"
+            className="p-2 pl-10 rounded bg-gray-700 text-white w-full"
+            aria-label="Search"
+          />
+          <FaSearch className="absolute top-2 left-3 text-white text-lg" />
+        </div>
       </div>
       
       {/* Navigation Icons */}
